@@ -6,3 +6,7 @@
 </div>
 
 <img src="https://raw.githubusercontent.com/rokartur/rokartur/output/snake.svg" alt="Snake animation" />
+
+<div align="center">
+  <img src="https://profile-counter.glitch.me/rokartur/count.svg?"  />
+</div>
