@@ -8,5 +8,5 @@
 <img src="https://raw.githubusercontent.com/rokartur/rokartur/output/snake.svg" alt="Snake animation" />
 
 <div align="center">
-  <img src="https://profile-counter.glitch.me/rokartur/count.svg?"  />
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=rokartur.rokartur&right_color=black"  />
 </div>
