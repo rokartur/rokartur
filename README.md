@@ -5,8 +5,6 @@
   <img src="https://streak-stats.demolab.com?user=rokartur&locale=en&mode=weekly&theme=dark&hide_border=true&border_radius=10&order=3" height="150" alt="streak graph"  />
 </div>
 
-<img src="https://raw.githubusercontent.com/rokartur/rokartur/output/snake.svg" alt="Snake animation" />
-
 <div align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=rokartur.rokartur&right_color=black"  />
 </div>
