@@ -4,5 +4,5 @@
 </div>
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=rokartur&style=for-the-badge&color=grey">
+  <a href="https://u8views.com/github/rokartur"><img src="https://u8views.com/api/v1/github/profiles/79342641/views/day-week-month-total-count.svg"></a>
 </div>
