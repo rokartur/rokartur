@@ -7,5 +7,4 @@ checkout my [linkedin](https://www.linkedin.com/in/rokartur/) or [my site I gues
 - **[XCStrings Editor](http://xcstrings.rokartur.com/)** - Web editor for xcstrings localization files with optional local AI translation via Ollama
 
 ### Packages
-- **[opencode-forgecode](https://www.npmjs.com/package/opencode-forgecode)** - The all-in-one OpenCode plugin for autonomous development workflows
 - **[opencode-enhancer](https://www.npmjs.com/package/opencode-enhancer)** - OpenCode plugin with multi-auth and automatic Codex account switching and usage tracking
