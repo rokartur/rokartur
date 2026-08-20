@@ -66,7 +66,7 @@ const signatureStrokes = [
     width: 14,
   },
   {
-    d: "M 336 73 C 405 59 507 34 633 8",
+    d: "M 352 66 C 414 57 515 30 633 8",
     delay: 1.14,
     duration: 0.32,
     width: 16,
