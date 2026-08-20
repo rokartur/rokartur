@@ -240,7 +240,7 @@ const Home = () => {
                 projects
               </h2>
             </m.header>
-            <ol className="m-0 grid list-none p-0">
+            <ol className="m-0 grid w-full max-w-md list-none p-0">
               {projects.map((project, index) => (
                 <m.li
                   initial={{
@@ -264,7 +264,7 @@ const Home = () => {
                   }}
                 >
                   <a
-                    className="group flex min-h-11 items-baseline gap-3 no-underline underline-offset-4 focus-visible:rounded-[0.125rem] focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
+                    className="group flex min-h-12 items-baseline gap-3 no-underline underline-offset-4 focus-visible:rounded-[0.125rem] focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
                     href={project.href}
                     rel="noopener noreferrer"
                     target="_blank"
