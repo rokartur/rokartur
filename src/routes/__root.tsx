@@ -16,14 +16,21 @@ const RootDocument = ({ children }: { children: React.ReactNode }) => (
 
 export const Route = createRootRoute({
   head: () => ({
-    links: [{ href: appCss, rel: "stylesheet" }],
+    links: [
+      { href: appCss, rel: "stylesheet" },
+      {
+        href: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3C/svg%3E",
+        rel: "icon",
+        type: "image/svg+xml",
+      },
+    ],
     meta: [
       { charSet: "utf-8" },
       {
         content: "width=device-width, initial-scale=1",
         name: "viewport",
       },
-      { title: "Artur Rok" },
+      { title: "rokartur" },
       {
         content:
           "Independent builder creating focused macOS products, developer tools, and web apps.",
