@@ -264,21 +264,15 @@ const Home = () => {
                   }}
                 >
                   <a
-                    className="group grid min-h-12 grid-cols-[2.25rem_minmax(9.375rem,1fr)_auto] items-center gap-4 no-underline underline-offset-4 focus-visible:rounded-[0.125rem] focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2] max-[42.5rem]:grid-cols-[2rem_1fr] max-[42.5rem]:items-start max-[42.5rem]:gap-x-3 max-[42.5rem]:gap-y-0.5 max-[42.5rem]:py-2"
+                    className="group flex min-h-12 items-baseline gap-3 no-underline underline-offset-4 focus-visible:rounded-[0.125rem] focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
                     href={project.href}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <span
-                      className="text-[0.6875rem] text-[#60605c] tabular-nums max-[42.5rem]:col-start-1 max-[42.5rem]:row-start-1 max-[42.5rem]:pt-0.5"
-                      aria-hidden="true"
-                    >
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <h3 className="m-0 text-base font-medium tracking-[-0.02em] text-balance group-hover:underline max-[42.5rem]:col-start-2 max-[42.5rem]:row-start-1">
+                    <h3 className="m-0 shrink-0 text-base font-medium tracking-[-0.02em] text-balance group-hover:underline">
                       {project.name}
                     </h3>
-                    <span className="text-xs text-[#999995] max-[42.5rem]:col-start-2 max-[42.5rem]:row-start-2">
+                    <span className="text-xs text-[#999995]">
                       {project.kind}
                     </span>
                   </a>
