@@ -104,17 +104,17 @@ const Home = () => {
   return (
     <MotionConfig reducedMotion="user">
       <LazyMotion features={domAnimation} strict>
-        <main className="ml-[clamp(2rem,6vw,5.75rem)] w-[min(calc(100%_-_4rem),45rem)] pt-[3.875rem] pb-[6.875rem] max-[42.5rem]:ml-5 max-[42.5rem]:w-[calc(100%_-_2.5rem)] max-[42.5rem]:pt-[2.875rem]">
-          <header className="mb-[4.5rem]">
+        <main className="ml-[clamp(2rem,6vw,5.75rem)] w-[min(calc(100%-4rem),45rem)] pt-15.5 pb-27.5 max-[42.5rem]:ml-5 max-[42.5rem]:w-[calc(100%-2.5rem)] max-[42.5rem]:pt-11.5">
+          <header className="mb-18">
             <h1 className="sr-only">Artur Rok</h1>
             <svg
               aria-hidden="true"
-              className="mb-6 -ml-2.5 block aspect-[638/195] w-[min(23.125rem,82vw)]"
+              className="mb-6 -ml-2.5 block aspect-638/195 w-[min(23.125rem,82vw)]"
               viewBox="0 0 638 195"
             >
               <defs>
                 <mask
-                  className="[mask-type:alpha]"
+                  className="mask-type-alpha"
                   height="195"
                   id="signature-shape"
                   maskUnits="userSpaceOnUse"
@@ -177,7 +177,7 @@ const Home = () => {
             </svg>
             <m.p
               animate={{ opacity: 1, transform: "translateY(0)" }}
-              className="mb-0 max-w-[36.875rem] text-[0.9375rem] leading-[1.75] text-pretty text-[#999995]"
+              className="mb-0 max-w-147.5 text-[0.9375rem] leading-[1.75] text-pretty text-[#999995]"
               initial={{ opacity: 0, transform: "translateY(6px)" }}
               transition={{
                 delay: contentDelay,
@@ -199,7 +199,7 @@ const Home = () => {
               }}
             >
               <a
-                className="inline-flex min-h-11 min-w-11 items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2] focus-visible:rounded-[0.125rem] focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
+                className="inline-flex min-h-11 min-w-11 items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2] focus-visible:rounded-xs focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
                 href="https://github.com/rokartur"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -207,7 +207,7 @@ const Home = () => {
                 gh
               </a>
               <a
-                className="inline-flex min-h-11 min-w-11 items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2] focus-visible:rounded-[0.125rem] focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
+                className="inline-flex min-h-11 min-w-11 items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2] focus-visible:rounded-xs focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
                 href="https://x.com/rokartur_"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -215,7 +215,7 @@ const Home = () => {
                 x
               </a>
               <a
-                className="inline-flex min-h-11 min-w-11 items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2] focus-visible:rounded-[0.125rem] focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
+                className="inline-flex min-h-11 min-w-11 items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2] focus-visible:rounded-xs focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
                 href="https://linkedin.com/in/rokartur/en"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -243,7 +243,7 @@ const Home = () => {
               whileInView={{ opacity: 1, transform: "translateY(0)" }}
             >
               <h2
-                className="m-0 text-base font-normal text-balance text-[#60605c]"
+                className="m-0 hidden text-base font-normal text-balance text-[#60605c]"
                 id="work-title"
               >
                 projects
@@ -273,7 +273,7 @@ const Home = () => {
                   }}
                 >
                   <a
-                    className="group flex min-h-12 items-baseline gap-3 no-underline underline-offset-4 focus-visible:rounded-[0.125rem] focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
+                    className="group flex min-h-12 items-baseline gap-3 no-underline underline-offset-4 focus-visible:rounded-xs focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
                     href={project.href}
                     rel="noopener noreferrer"
                     target="_blank"
