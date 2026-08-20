@@ -4,7 +4,11 @@ import viteReact from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 const config = defineConfig({
-  plugins: [tailwindcss(), tanstackStart(), viteReact()],
+  plugins: [
+    tailwindcss(),
+    tanstackStart({ prerender: { enabled: true } }),
+    viteReact(),
+  ],
   resolve: { tsconfigPaths: true },
 });
 
