@@ -234,10 +234,10 @@ const Home = () => {
               whileInView={{ opacity: 1, transform: "translateY(0)" }}
             >
               <h2
-                className="m-0 text-base font-semibold text-balance text-[#60605c]"
+                className="m-0 text-base font-normal text-balance text-[#60605c]"
                 id="work-title"
               >
-                Projects
+                projects
               </h2>
             </m.header>
             <ol className="m-0 grid list-none p-0">
