@@ -228,7 +228,8 @@ const Home = () => {
           <section
             className="scroll-mt-8"
             id="work"
-            aria-labelledby="work-title"
+            aria-labelledby="projects"
+            aria-label="projects"
           >
             <m.header
               className="mb-5"
