@@ -214,6 +214,14 @@ const Home = () => {
               >
                 x
               </a>
+              <a
+                className="inline-flex min-h-11 min-w-11 items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2] focus-visible:rounded-[0.125rem] focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
+                href="https://linkedin.com/in/rokartur/en"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                ld
+              </a>
             </m.nav>
           </header>
 
