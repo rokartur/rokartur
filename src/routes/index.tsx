@@ -190,7 +190,7 @@ const Home = () => {
             <m.nav
               animate={{ opacity: 1, transform: "translateY(0)" }}
               aria-label="Social links"
-              className="mt-1.5 flex gap-1 text-[0.9375rem] leading-[1.75] text-[#999995]"
+              className="mt-1.5 flex gap-4 text-[0.9375rem] text-[#999995]"
               initial={{ opacity: 0, transform: "translateY(6px)" }}
               transition={{
                 delay: contentDelay + 0.08,
@@ -199,7 +199,7 @@ const Home = () => {
               }}
             >
               <a
-                className="inline-flex min-h-11 min-w-11 items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2] focus-visible:rounded-xs focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
+                className="flex min-h-11 text-center items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2]"
                 href="https://github.com/rokartur"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -207,7 +207,7 @@ const Home = () => {
                 gh
               </a>
               <a
-                className="inline-flex min-h-11 min-w-11 items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2] focus-visible:rounded-xs focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
+                className="flex min-h-11 text-center items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2]"
                 href="https://x.com/rokartur_"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -215,7 +215,7 @@ const Home = () => {
                 x
               </a>
               <a
-                className="inline-flex min-h-11 min-w-11 items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2] focus-visible:rounded-xs focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
+                className="flex min-h-11 text-center items-center text-[0.9375rem] no-underline underline-offset-4 transition-colors duration-150 hover:text-[#f4f4f2]"
                 href="https://linkedin.com/in/rokartur/en"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -273,7 +273,7 @@ const Home = () => {
                   }}
                 >
                   <a
-                    className="group flex min-h-12 items-baseline gap-3 no-underline underline-offset-4 focus-visible:rounded-xs focus-visible:outline-2 focus-visible:outline-offset-[5px] focus-visible:outline-[#f4f4f2]"
+                    className="group flex min-h-12 items-baseline gap-3 no-underline underline-offset-4"
                     href={project.href}
                     rel="noopener noreferrer"
                     target="_blank"
