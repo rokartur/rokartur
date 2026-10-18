@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vp dev",
-    "build": "tsc -b && vp build",
+    "build": "tsc -b && vp build && cp dist/index.html dist/404.html",
     "check": "vp check",
     "preview": "vp preview",
     "github-data": "node scripts/github-data.mjs"

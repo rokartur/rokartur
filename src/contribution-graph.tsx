@@ -8,14 +8,12 @@ import {
   useTransform,
 } from "motion/react";
 import { useEffect, useRef, useState, type PointerEvent } from "react";
+import { CELL, LEVEL_OPACITY, STEP } from "./cell-grid.ts";
 import calendar from "./contributions.json";
 
-const CELL = 11;
-const STEP = 14;
 const GRID_TOP = 22;
 const WIDTH = calendar.weeks.length * STEP - 3;
 const HEIGHT = GRID_TOP + 7 * STEP - 3;
-const LEVEL_OPACITY = [0.08, 0.2, 0.4, 0.6, 0.85];
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 const GLIDE = { type: "spring", stiffness: 520, damping: 38, mass: 0.6 } as const;
 const TOOLTIP_HALF_WIDTH = 120;
