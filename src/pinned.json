@@ -1,0 +1,37 @@
+[
+  {
+    "name": "agent",
+    "description": "efficient af possible coding harness",
+    "url": "https://github.com/rokartur/agent",
+    "homepage": "https://agent.rokartur.com",
+    "stars": 2
+  },
+  {
+    "name": "BetterAudio",
+    "description": "Master your Mac’s audio",
+    "url": "https://github.com/rokartur/BetterAudio",
+    "homepage": "https://betteraudio.pro",
+    "stars": 485
+  },
+  {
+    "name": "BetterCmdTab",
+    "description": "Master your Mac’s ⌘Tab",
+    "url": "https://github.com/rokartur/BetterCmdTab",
+    "homepage": "https://bettercmdtab.app",
+    "stars": 817
+  },
+  {
+    "name": "vexdock",
+    "description": "self-hosted alternative to vercel, heroku and netlify",
+    "url": "https://github.com/rokartur/vexdock",
+    "homepage": "https://vexdock.com",
+    "stars": 2
+  },
+  {
+    "name": "BetterCleaner",
+    "description": "The uninstaller macOS deserves",
+    "url": "https://github.com/rokartur/BetterCleaner",
+    "homepage": null,
+    "stars": 7
+  }
+]
