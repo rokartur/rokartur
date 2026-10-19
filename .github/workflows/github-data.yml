@@ -1,0 +1,31 @@
+---
+# Full action SHAs necessarily exceed the 80-character line limit.
+# yamllint disable rule:line-length
+name: Refresh GitHub data
+
+"on":
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: github-data
+
+jobs:
+  refresh:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - run: node scripts/github-data.mjs
+        env:
+          GH_TOKEN: ${{ github.token }}
+      # The push redeploys the site through Vexdock's auto-deploy on master.
+      - run: |
+          git add src/contributions.json src/pinned.json
+          git diff --staged --quiet && exit 0
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "chore(data): refresh GitHub contributions"
+          git push
