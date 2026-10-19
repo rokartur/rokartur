@@ -1,6 +1,7 @@
 import { AnimatePresence, motion, useAnimate, useReducedMotion } from "motion/react";
 import { useState } from "react";
 import { CELL, LEVEL_OPACITY, STEP } from "./cell-grid.ts";
+import { playHover, playPress } from "./sound.ts";
 
 const BITMAP = [
   "...............",
@@ -33,6 +34,7 @@ export function NotFound() {
   const [hovered, setHovered] = useState<Cell | null>(null);
 
   function ripple(origin: Cell) {
+    playPress();
     if (reduceMotion) return;
     void animateCells(
       "rect[data-cell]",
@@ -73,7 +75,10 @@ export function NotFound() {
               initial={{ opacity: 0, scale: 0.4 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.34, ease: EASE_OUT, delay: (cell.col + cell.row) * 0.012 }}
-              onPointerEnter={() => setHovered(cell)}
+              onPointerEnter={() => {
+                setHovered(cell);
+                playHover();
+              }}
               onPointerDown={() => ripple(cell)}
             />
           ))}
@@ -108,6 +113,8 @@ export function NotFound() {
             href="/"
             className="inline-flex h-8 items-center rounded-lg bg-muted px-3 text-sm font-medium transition-colors hover:bg-muted/70"
             whileTap={{ scale: 0.97 }}
+            onPointerEnter={playHover}
+            onPointerDown={playPress}
           >
             Back home
           </motion.a>

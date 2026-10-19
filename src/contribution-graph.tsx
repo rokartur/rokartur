@@ -10,6 +10,7 @@ import {
 import { useEffect, useRef, useState, type PointerEvent } from "react";
 import { CELL, LEVEL_OPACITY, STEP } from "./cell-grid.ts";
 import calendar from "./contributions.json";
+import { playHover, playPress } from "./sound.ts";
 
 const GRID_TOP = 22;
 const WIDTH = calendar.weeks.length * STEP - 3;
@@ -59,6 +60,7 @@ export function ContributionGraph() {
     const x = box.left + box.width / 2 - frame.left;
     const boxX = Math.min(Math.max(x, TOOLTIP_HALF_WIDTH), frame.width - TOOLTIP_HALF_WIDTH);
     setHover({ cell, x, y: box.top - frame.top, boxX });
+    playHover();
   }
 
   function hideTooltip(event: PointerEvent<SVGSVGElement>) {
@@ -68,7 +70,9 @@ export function ContributionGraph() {
 
   function ripple(event: PointerEvent<SVGSVGElement>) {
     const origin = cellFromTarget(event.target);
-    if (!origin || reduceMotion) return;
+    if (!origin) return;
+    playPress();
+    if (reduceMotion) return;
     void animateCells(
       "rect[data-date]",
       { scale: [1, 1.7, 1] },
@@ -228,8 +232,12 @@ export function ContributionGraph() {
               whileHover={{ scale: 1.25 }}
               whileTap={{ scale: 0.97 }}
               transition={GLIDE}
-              onPointerEnter={() => setFocus({ kind: "level", level })}
-                            onPointerLeave={() => setFocus(null)}
+              onPointerEnter={() => {
+                setFocus({ kind: "level", level });
+                playHover();
+              }}
+              onPointerDown={playPress}
+              onPointerLeave={() => setFocus(null)}
               onFocus={() => setFocus({ kind: "level", level })}
               onBlur={() => setFocus(null)}
             >

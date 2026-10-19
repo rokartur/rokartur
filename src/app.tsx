@@ -3,6 +3,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { ContributionGraph } from "./contribution-graph.tsx";
 import pinned from "./pinned.json";
 import { Signature } from "./signature.tsx";
+import { playHover, playPress } from "./sound.ts";
 
 const EASE_ENTER = [0.16, 1, 0.3, 1] as const;
 const GLIDE = { type: "spring", visualDuration: 0.28, bounce: 0 } as const;
@@ -66,6 +67,8 @@ export function App() {
               rel="noopener noreferrer"
               className="inline-flex h-8 items-center gap-1.5 rounded-lg bg-muted px-3 text-sm font-medium transition-colors hover:bg-muted/70"
               whileTap={PRESS}
+              onPointerEnter={playHover}
+              onPointerDown={playPress}
             >
               {social.icon}
               {social.label}
@@ -95,7 +98,10 @@ function ProjectList() {
           <li
             key={project.name}
             className="relative isolate flex items-center gap-4 rounded-lg border border-border px-4 py-3 text-sm"
-            onPointerEnter={() => setHovered(project.name)}
+            onPointerEnter={() => {
+              setHovered(project.name);
+              playHover();
+            }}
           >
             {hovered === project.name && (
               <motion.span
@@ -116,6 +122,7 @@ function ProjectList() {
                 aria-label={`${project.name} on GitHub, ${project.stars} stars`}
                 className="inline-flex h-7 items-center gap-1 rounded-lg bg-muted px-2 transition-colors hover:bg-muted/70"
                 whileTap={PRESS}
+                onPointerDown={playPress}
               >
                 <span className="font-mono text-xs tabular-nums">{project.stars}</span>
                 <GitHubIcon />
@@ -128,6 +135,7 @@ function ProjectList() {
                   aria-label={`${project.name} website`}
                   className="group inline-flex size-7 items-center justify-center rounded-lg bg-muted transition-colors hover:bg-muted/70"
                   whileTap={PRESS}
+                  onPointerDown={playPress}
                 >
                   <ArrowIcon />
                 </motion.a>
