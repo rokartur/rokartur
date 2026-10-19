@@ -19,10 +19,3 @@
     @apply bg-background font-sans text-foreground antialiased;
   }
 }
-
-@utility no-scrollbar {
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}

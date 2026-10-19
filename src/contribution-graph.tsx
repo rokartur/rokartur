@@ -82,89 +82,83 @@ export function ContributionGraph() {
   }
 
   return (
-    <figure ref={figureRef} className="relative mx-auto flex w-max max-w-full flex-col gap-3 py-2">
-      <div
-        ref={scrollToLatest}
-        className="no-scrollbar max-w-full overflow-x-auto overflow-y-hidden p-0.5"
-        onScroll={() => setHover(null)}
+    <figure ref={figureRef} className="relative flex flex-col gap-3 py-2">
+      <svg
+        ref={svgRef}
+        className="block h-auto w-full cursor-pointer overflow-visible fill-muted-foreground text-sm"
+        viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
+        width={WIDTH}
+        height={HEIGHT}
+        role="img"
+        aria-label={`${calendar.total.toLocaleString("en")} GitHub contributions in the last year`}
+        onPointerOver={showTooltip}
+        onPointerLeave={hideTooltip}
+        onPointerDown={ripple}
       >
-        <svg
-          ref={svgRef}
-          className="block cursor-pointer overflow-visible fill-muted-foreground text-sm"
-          viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
-          width={WIDTH}
-          height={HEIGHT}
-          role="img"
-          aria-label={`${calendar.total.toLocaleString("en")} GitHub contributions in the last year`}
-          onPointerOver={showTooltip}
-          onPointerLeave={hideTooltip}
-          onPointerDown={ripple}
-        >
-          {months.map((month, index) => (
-            <motion.text
-              key={month.key}
-              className="cursor-default fill-foreground"
-              x={month.col * STEP}
-              y={0}
-              dominantBaseline="hanging"
-              initial={{ opacity: 0, y: 4 }}
-              animate={
-                inView
-                  ? { opacity: focus?.kind === "month" && focus.key !== month.key ? 0.35 : 1, y: 0 }
-                  : undefined
-              }
-              transition={{
-                opacity: { duration: 0.17, ease: EASE_OUT },
-                y: { ...GLIDE, delay: index * 0.02 },
-              }}
-              onPointerEnter={() => setFocus({ kind: "month", key: month.key, label: month.long })}
-              onPointerLeave={() => setFocus(null)}
-            >
-              {month.short}
-            </motion.text>
-          ))}
-          {weeks.map((week, col) => (
-            <motion.g
-              key={week[0].date}
-              initial={{ opacity: 0, y: 8 }}
-              animate={inView ? { opacity: 1, y: 0 } : undefined}
-              transition={{ ...GLIDE, delay: col * 0.005 }}
-            >
-              {week.map((cell) => (
-                <motion.rect
-                  key={cell.date}
-                  className="origin-center transform-fill"
-                  data-date={cell.date}
-                  x={cell.col * STEP}
-                  y={GRID_TOP + cell.row * STEP}
-                  width={CELL}
-                  height={CELL}
-                  rx={2}
-                  fillOpacity={LEVEL_OPACITY[cell.level]}
-                  animate={{ opacity: isDimmed(cell, focus) ? 0.15 : 1 }}
-                  transition={{ duration: 0.17, ease: EASE_OUT }}
-                />
-              ))}
-            </motion.g>
-          ))}
-          <AnimatePresence>
-            {hover && (
+        {months.map((month, index) => (
+          <motion.text
+            key={month.key}
+            className="cursor-default fill-foreground"
+            x={month.col * STEP}
+            y={0}
+            dominantBaseline="hanging"
+            initial={{ opacity: 0, y: 4 }}
+            animate={
+              inView
+                ? { opacity: focus?.kind === "month" && focus.key !== month.key ? 0.35 : 1, y: 0 }
+                : undefined
+            }
+            transition={{
+              opacity: { duration: 0.17, ease: EASE_OUT },
+              y: { ...GLIDE, delay: index * 0.02 },
+            }}
+            onPointerEnter={() => setFocus({ kind: "month", key: month.key, label: month.long })}
+            onPointerLeave={() => setFocus(null)}
+          >
+            {month.short}
+          </motion.text>
+        ))}
+        {weeks.map((week, col) => (
+          <motion.g
+            key={week[0].date}
+            initial={{ opacity: 0, y: 8 }}
+            animate={inView ? { opacity: 1, y: 0 } : undefined}
+            transition={{ ...GLIDE, delay: col * 0.005 }}
+          >
+            {week.map((cell) => (
               <motion.rect
-                key="ring"
-                className="pointer-events-none fill-none stroke-foreground"
-                strokeWidth={1.5}
-                width={CELL + 4}
-                height={CELL + 4}
-                rx={4}
-                initial={{ opacity: 0, scale: 0.6, ...ringPosition(hover.cell) }}
-                animate={{ opacity: 1, scale: 1, ...ringPosition(hover.cell) }}
-                exit={{ opacity: 0, scale: 0.6, transition: { duration: 0.125 } }}
-                transition={GLIDE}
+                key={cell.date}
+                className="origin-center transform-fill"
+                data-date={cell.date}
+                x={cell.col * STEP}
+                y={GRID_TOP + cell.row * STEP}
+                width={CELL}
+                height={CELL}
+                rx={2}
+                fillOpacity={LEVEL_OPACITY[cell.level]}
+                animate={{ opacity: isDimmed(cell, focus) ? 0.15 : 1 }}
+                transition={{ duration: 0.17, ease: EASE_OUT }}
               />
-            )}
-          </AnimatePresence>
-        </svg>
-      </div>
+            ))}
+          </motion.g>
+        ))}
+        <AnimatePresence>
+          {hover && (
+            <motion.rect
+              key="ring"
+              className="pointer-events-none fill-none stroke-foreground"
+              strokeWidth={1.5}
+              width={CELL + 4}
+              height={CELL + 4}
+              rx={4}
+              initial={{ opacity: 0, scale: 0.6, ...ringPosition(hover.cell) }}
+              animate={{ opacity: 1, scale: 1, ...ringPosition(hover.cell) }}
+              exit={{ opacity: 0, scale: 0.6, transition: { duration: 0.125 } }}
+              transition={GLIDE}
+            />
+          )}
+        </AnimatePresence>
+      </svg>
 
       <AnimatePresence>
         {hover && (
@@ -235,7 +229,7 @@ export function ContributionGraph() {
               whileTap={{ scale: 0.97 }}
               transition={GLIDE}
               onPointerEnter={() => setFocus({ kind: "level", level })}
-              onPointerLeave={() => setFocus(null)}
+                            onPointerLeave={() => setFocus(null)}
               onFocus={() => setFocus({ kind: "level", level })}
               onBlur={() => setFocus(null)}
             >
@@ -249,10 +243,6 @@ export function ContributionGraph() {
       </div>
     </figure>
   );
-}
-
-function scrollToLatest(node: HTMLDivElement | null) {
-  if (node) node.scrollLeft = node.scrollWidth;
 }
 
 function cellFromTarget(target: EventTarget) {
