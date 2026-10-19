@@ -1,7 +1,7 @@
 [
   {
     "name": "agent",
-    "description": "efficient af possible coding harness",
+    "description": "simple af possible coding harness",
     "url": "https://github.com/rokartur/agent",
     "homepage": "https://agent.rokartur.com",
     "stars": 2
@@ -11,7 +11,7 @@
     "description": "Master your Mac’s audio",
     "url": "https://github.com/rokartur/BetterAudio",
     "homepage": "https://betteraudio.pro",
-    "stars": 484
+    "stars": 485
   },
   {
     "name": "BetterCmdTab",
