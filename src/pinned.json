@@ -15,10 +15,10 @@
   },
   {
     "name": "BetterCmdTab",
-    "description": "Master your Mac’s ⌘Tab",
+    "description": "Free, open-source ⌘Tab window switcher and app launcher for macOS",
     "url": "https://github.com/rokartur/BetterCmdTab",
     "homepage": "https://bettercmdtab.app",
-    "stars": 839
+    "stars": 840
   },
   {
     "name": "vexdock",
