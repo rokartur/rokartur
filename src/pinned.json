@@ -4,7 +4,7 @@
     "description": "Master your Mac’s audio",
     "url": "https://github.com/rokartur/BetterAudio",
     "homepage": "https://betteraudio.pro",
-    "stars": 487
+    "stars": 488
   },
   {
     "name": "agent",
@@ -15,10 +15,10 @@
   },
   {
     "name": "BetterCmdTab",
-    "description": "Free, open-source ⌘Tab window switcher and app launcher for macOS",
+    "description": "Free, open-source ⌘Tab window switcher for macOS",
     "url": "https://github.com/rokartur/BetterCmdTab",
     "homepage": "https://bettercmdtab.app",
-    "stars": 844
+    "stars": 843
   },
   {
     "name": "vexdock",
