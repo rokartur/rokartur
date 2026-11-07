@@ -26,5 +26,12 @@
     "url": "https://github.com/rokartur/vexdock",
     "homepage": "https://vexdock.com",
     "stars": 2
+  },
+  {
+    "name": "dockwatch",
+    "description": "the better way to manage docker via tui",
+    "url": "https://github.com/rokartur/dockwatch",
+    "homepage": null,
+    "stars": 1
   }
 ]
