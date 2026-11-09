@@ -33,5 +33,12 @@
     "url": "https://github.com/rokartur/dockwatch",
     "homepage": null,
     "stars": 1
+  },
+  {
+    "name": "cleaner",
+    "description": "Uninstall Mac apps with all their leftovers, from your terminal.",
+    "url": "https://github.com/rokartur/cleaner",
+    "homepage": null,
+    "stars": 7
   }
 ]
