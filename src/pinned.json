@@ -7,13 +7,6 @@
     "stars": 493
   },
   {
-    "name": "agent",
-    "description": "simple af possible coding harness",
-    "url": "https://github.com/rokartur/agent",
-    "homepage": "https://agent.rokartur.com",
-    "stars": 2
-  },
-  {
     "name": "BetterCmdTab",
     "description": "Free, open-source ⌘Tab window switcher for macOS",
     "url": "https://github.com/rokartur/BetterCmdTab",
@@ -21,24 +14,10 @@
     "stars": 870
   },
   {
-    "name": "vexdock",
-    "description": "self-hosted alternative to vercel, heroku and netlify",
-    "url": "https://github.com/rokartur/vexdock",
-    "homepage": "https://vexdock.com",
-    "stars": 1
-  },
-  {
-    "name": "dockwatch",
-    "description": "the better way to manage docker via tui",
-    "url": "https://github.com/rokartur/dockwatch",
+    "name": "skills",
+    "description": "",
+    "url": "https://github.com/rokartur/skills",
     "homepage": null,
-    "stars": 1
-  },
-  {
-    "name": "cleaner",
-    "description": "Uninstall Mac apps with all their leftovers, from your terminal.",
-    "url": "https://github.com/rokartur/cleaner",
-    "homepage": null,
-    "stars": 8
+    "stars": 0
   }
 ]
