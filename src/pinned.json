@@ -18,7 +18,7 @@
     "description": "Free, open-source ⌘Tab window switcher for macOS",
     "url": "https://github.com/rokartur/BetterCmdTab",
     "homepage": "https://bettercmdtab.app",
-    "stars": 868
+    "stars": 870
   },
   {
     "name": "vexdock",
@@ -39,6 +39,6 @@
     "description": "Uninstall Mac apps with all their leftovers, from your terminal.",
     "url": "https://github.com/rokartur/cleaner",
     "homepage": null,
-    "stars": 7
+    "stars": 8
   }
 ]
